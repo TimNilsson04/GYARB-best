@@ -1,0 +1,22 @@
+---
+pagination:
+    data: flipflops
+    size: 1
+    alias: flipflop
+permalink: "flipflops/{{ flipflop.name | slug }}/"
+---
+
+
+{% asyncAll product in flipflops %}
+        <div>
+           <!-- <pre>{{ product | dump(2) }}</pre> !-->
+
+            {% set imageUrl = "./src/img/" + product.name + "/" + product.images[1].url  %}
+
+            {% image imageUrl, product.images[1].alt %}
+
+            
+
+        </div>
+
+{{ flipflop.name }} is priced at {{ flipflop.price }} 

@@ -1,0 +1,41 @@
+---
+layout: base.njk
+title: Flip flops
+---
+
+
+<main>
+
+       <nav>
+        <p>Denna sida sparar din data</p>
+    </nav>
+    <div class="item1">
+    <h1>Bättre GYARB Hemsida</h1>
+</div>
+    <div class="font">
+    <p>
+        Den här sidan är gjord som ett experiment för att kolla hur effektiv en app kallad    
+    </p>
+    <p>
+        Ligthhouse är för att förbättra SEO värdet på en hemsida.
+    </p>
+
+</div>
+
+    <div class="grid-container">
+
+        {% asyncAll product in flipflops %}
+        <div class="grid-item">
+           <!-- <pre>{{ product | dump(2) }}</pre> !-->
+            {% set imageUrl = "./src/img/" + product.name + "/" + product.images[0].url  %}
+            {% image imageUrl, product.images[0].alt %}
+
+            <a href="/flipflops/{{ product.name | slug }}">{{ product.name }}</a>
+
+        </div>
+
+
+        {% endall %}
+    </div>
+        
+</main>

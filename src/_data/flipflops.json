@@ -1,0 +1,117 @@
+[
+    {
+        "name": "hawaii",
+        "brand": "Stadium",
+        "colors": ["black", "printed"],
+        "sized": [34, 35, 36, 37,38],
+        "price": 79.90,
+        "description": "Flip-flops, Stl. 31-38, Remmar i PVC-fritt gummi, Sula i PE-material",
+        "images": [
+            {
+                "url": "hawaii.webp",
+                "alt": "Hawaii flipp flop"
+            },
+            {
+                "url": "first.webp",
+                "alt": "Sido view"
+            }
+        ]
+
+    },
+    {
+        "name": "orange",
+        "brand": "Stadium",
+        "colors": ["Denver orange"],
+        "sized": [34, 35, 36, 37,38],
+        "price": 149,
+        "description": "Flip-flops, Herrstorlekar, Remmar i gummi, Sula i EVA och gummi",
+        "images": [
+            {
+                "url": "orange.webp",
+                "alt": "Orange flipp flop"
+            },
+            {
+                "url": "second.webp",
+                "alt": "Sido view"
+            }
+        ]
+        
+    },
+    {
+        "name": "black",
+        "brand": "Stadium",
+        "colors": ["black"],
+        "sized": [34, 35, 36, 37,38],
+        "price": 149,
+        "description": "Flip-flops, Herrstorlekar, Remmar i gummi, Sula i EVA och gummi",
+        "images": [
+            {
+                "url": "black.webp",
+                "alt": "Black flipp flop"
+            },
+            {
+                "url": "third.webp",
+                "alt": "Sido view"
+            }
+        ]
+        
+    },
+    {
+        "name": "brown",
+        "brand": "Stadium",
+        "colors": ["tan"],
+        "sized": [34, 35, 36, 37,38],
+        "price": 299,
+        "description": "Flip-flops,  Damstorlekar, Remmar i syntetskinn, Innersula i EVA-material, Yttersula i gummi",
+        "images": [
+            {
+                "url": "brown.png",
+                "alt": "Brown flipp flop"
+            },
+            {
+                "url": "fourth.webp",
+                "alt": "Sido view"
+            }
+        ]
+        
+    },
+    {
+        "name": "roxy",
+        "brand": "Stadium",
+        "colors": ["black 1"],
+        "sized": [34, 35, 36, 37,38],
+        "price": 129,
+        "description": "Flip-flops, Juniorstorlekar, Remmar i TPU-material, Yttersula och fotbädd i gummi",
+        "images": [
+            {
+                "url": "roxy.png",
+                "alt": "Roxy flipp flop"
+            },
+            {
+                "url": "fifth.webp",
+                "alt": "Sido view"
+            }
+        ]
+        
+    },
+    {
+        "name": "black-blue",
+        "brand": "Stadium",
+        "colors": ["black"],
+        "sized": [34, 35, 36, 37,38],
+        "price": 199,
+        "description": "Flip-flops, Herrstorlekar, Ovandel i bomullscanvas, Anatomisk fotbädd med fotvalvsstöd, Mönstrad yttersula i EVA och gummi, Innerfoder i vattentålig polyester",
+        "images": [
+            {
+                "url": "black-blue.png",
+                "alt": "Black-Blue flipp flop"
+            },
+            {
+                "url": "sixth.webp",
+                "alt": "Sido view"
+            }
+        ]
+        
+    }
+
+]
