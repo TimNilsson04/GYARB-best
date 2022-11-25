@@ -2,14 +2,10 @@
 pagination:
     data: flipflops
     size: 1
-    alias: flipflop
-permalink: "flipflops/{{ flipflop.name | slug }}/"
+    alias: product
+permalink: "flipflops/{{ product.name | slug }}/"
 ---
-
-
-{% asyncAll product in flipflops %}
-        <div>
-           <!-- <pre>{{ product | dump(2) }}</pre> !-->
+<div>
 
             {% set imageUrl = "./src/img/" + product.name + "/" + product.images[1].url  %}
 
