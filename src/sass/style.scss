@@ -18,9 +18,24 @@ body{
     padding-bottom: 5rem;
     padding-top: 2rem;
     text-align: center;
-    
   }
-
+  .grid-container2 {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: auto;
+    justify-content: center;
+    column-gap: 80px;
+    row-gap: 40px;
+    padding-bottom: 5rem;
+    padding-top: 2rem;
+    align-items: center;
+  }
+.text{
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
 .item1{
     
     color: #121212;

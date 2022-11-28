@@ -1,18 +1,30 @@
 ---
+layout: base.njk
+title: Product Page
 pagination:
     data: flipflops
     size: 1
     alias: product
 permalink: "flipflops/{{ product.name | slug }}/"
 ---
-<div>
+<nav>
+    <a href="/">Hem</a>
+</nav>
 
+
+<div class="grid-container2">
+    
+            {% set imageUrl = "./src/img/" + product.name + "/" + product.images[0].url  %}
+            {% image imageUrl, product.images[0].alt %}
+
+            <div class="image1">
             {% set imageUrl = "./src/img/" + product.name + "/" + product.images[1].url  %}
-
             {% image imageUrl, product.images[1].alt %}
-
+        </div>
             
 
         </div>
 
-{{ flipflop.name }} is priced at {{ flipflop.price }} 
+<div class="text">
+{{ product.name }} is priced at {{ product.price }} 
+</div>

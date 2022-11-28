@@ -1,10 +1,12 @@
 ---
 layout: base.njk
-title: Flip Flops
+title: Flip flops
 ---
 
-<main >
-    <nav>
+
+<main>
+
+       <nav>
         <p>Denna sida sparar din data</p>
     </nav>
     <div class="item1">
@@ -21,25 +23,32 @@ title: Flip Flops
 </div>
 
     <div class="grid-container">
-        
-            <img src="./img/hawaii.webp" alt="https://www.stadium.se/barn/barnskor/sandaler/350683102/warp.j-sand-flip-flop.black-printed">        
 
-        <img src="./img/orange.webp" alt="https://www.stadium.se/herr/herrskor/sandaler/364421102/superdry.m-code-essential-flip-flop.denver-orange">
+        {% asyncAll product in flipflops %}
+        <div class="grid-item">
+           <!-- <pre>{{ product | dump(2) }}</pre> !-->
+            {% set imageUrl = "./src/img/" + product.name + "/" + product.images[0].url  %}
+            {% image imageUrl, product.images[0].alt %}
+
+            
+            <a href="/flipflops/{{ product.name | slug }}">{{ product.name }}</a>
+
+
+        </div>
+
+
+        {% endall %}
+    </div>
         
-        <img src="./img/black.webp" alt="https://www.stadium.se/herr/herrskor/sandaler/364421101/superdry.m-code-essential-flip-flop.black">
+</main>
+
+<!-- urls
 
         <a href="https://www.stadium.se/barn/barnskor/sandaler/350683102/warp.j-sand-flip-flop.black-printed">Länk</a>
-
 
         <a href="https://www.stadium.se/herr/herrskor/sandaler/364421102/superdry.m-code-essential-flip-flop.denver-orange">Länk</a>
 
         <a href="https://www.stadium.se/herr/herrskor/sandaler/364421101/superdry.m-code-essential-flip-flop.black">Länk</a>
-
-        <img src="./img/brown.png" alt="https://www.stadium.se/dam/damskor/sandaler/299592102/roxy.w-jyll-iii.tan">
-
-        <img src="./img/roxy.png" alt="https://www.stadium.se/barn/barnskor/sandaler/320730102/roxy.g-rg-sandy-iii.black-i">
-
-        <img src="./img/black-blue.png" alt="https://www.stadium.se/herr/herrskor/sandaler/363254106/quiksilver.m-molokai-layback.black#">
 
         <a href="https://www.stadium.se/dam/damskor/sandaler/299592102/roxy.w-jyll-iii.tan">Länk</a>
 
@@ -47,6 +56,3 @@ title: Flip Flops
 
         <a href="https://www.stadium.se/herr/herrskor/sandaler/363254106/quiksilver.m-molokai-layback.black#">Länk</a>
 
-</div>
-
-</main>
