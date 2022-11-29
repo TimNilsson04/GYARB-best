@@ -13,11 +13,12 @@ body{
     grid-template-columns: auto auto auto;
     padding: auto;
     justify-content: center;
-    column-gap: 80px;
+    column-gap: 30px;
     row-gap: 40px;
     padding-bottom: 5rem;
     padding-top: 2rem;
     text-align: center;
+
   }
   .grid-container2 {
     display: grid;
@@ -29,6 +30,7 @@ body{
     padding-bottom: 5rem;
     padding-top: 2rem;
     align-items: center;
+    
   }
 .text{
     text-align: center;
@@ -53,8 +55,9 @@ nav{
     text-align: center;
 }
 img{
-    background-color: rgb(79, 220, 220);
+    background-color: #73d7e5;
     box-shadow: 10px 10px;
+    padding: 2rem;
 }
 
 @media(max-width: 768px)
@@ -65,5 +68,46 @@ img{
         }
         
     }
+
+a{
+     color: #51e1b6;
+}
+  a:hover, a:active, a:focus {
+    color: #9D8DF1;
+  }
+
+//Product card:
+  .card {
+    margin-top: 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    text-align: center;
+    font-family: arial;
+  }
+  .card1 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    text-align: center;
+    font-family: arial;
+  }
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    
+  }
+  .card button:hover {
+    opacity: 0.7;
+  }
 
 

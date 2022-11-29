@@ -25,22 +25,28 @@ title: Flip flops
     <div class="grid-container">
 
         {% asyncAll product in flipflops %}
-        <div class="grid-item">
            <!-- <pre>{{ product | dump(2) }}</pre> !-->
+
+<div class="grid-container">
+    <div>
+        <h2 style="text-align:center">{{ product.name }}</h2>
+        <a href="/flipflops/{{ product.name | slug }}"> 
             {% set imageUrl = "./src/img/" + product.name + "/" + product.images[0].url  %}
             {% image imageUrl, product.images[0].alt %}
-
-            
-            <a href="/flipflops/{{ product.name | slug }}">{{ product.name }}</a>
-
-
+        </a>
+        <div class="card">
+          <h1></h1>
+          <p class="price">{{ product.price }}Kr</p>
+          <p>{{ product.description }}</p>
         </div>
+    </div>
+    </div>
+        </main>
 
 
         {% endall %}
     </div>
-        
-</main>
+
 
 <!-- urls
 
