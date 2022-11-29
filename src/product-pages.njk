@@ -11,20 +11,27 @@ permalink: "flipflops/{{ product.name | slug }}/"
     <a href="/">Hem</a>
 </nav>
 
+<body class="background">
+    
 
 <div class="grid-container2">
     
             {% set imageUrl = "./src/img/" + product.name + "/" + product.images[0].url  %}
             {% image imageUrl, product.images[0].alt %}
 
-            <div class="image1">
+        <div class="text">
+           <p> Beskrivning </p>
+           <p> {{ product.description }} </p>
+           <p> {{ product.name }} har priset {{ product.price }} </p>
+        </div>
+            
             {% set imageUrl = "./src/img/" + product.name + "/" + product.images[1].url  %}
             {% image imageUrl, product.images[1].alt %}
-        </div>
+
             
 
         </div>
 
-<div class="text">
-{{ product.name }} is priced at {{ product.price }} 
-</div>
+    </body>        
+
+
