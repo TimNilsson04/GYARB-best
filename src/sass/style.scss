@@ -50,8 +50,6 @@ hr{
   a:hover {
     color: #1CFEBA;
   }
- 
- 
     text-decoration: none;
   
 }
@@ -61,6 +59,10 @@ hr{
   font-size: 1rem;
   font-family: 'Cormorant Infant', serif;
   color: #9D8DF1;
+}
+.text1{
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
 
@@ -92,7 +94,13 @@ img{
             grid-template-columns: auto;
             gap: 25px;
         }
-        
+        .grid-container2{
+          grid-template-columns: auto;
+          gap: 15px;
+        }
+        .separate > picture:nth-child(2){
+          margin-bottom: 2rem;
+        }
     }
 
 a{
@@ -101,6 +109,12 @@ a{
   a:hover, a:active, a:focus {
     color: #9D8DF1;
   }
+
+
+  .separate > picture:nth-child(1) {
+    margin-bottom: 2rem;
+  }
+  
 
 
 
@@ -123,7 +137,7 @@ a{
     color: grey;
     font-size: 22px;
   }
-  .card button {
+  .card > button {
     border: none;
     outline: 0;
     padding: 12px;
