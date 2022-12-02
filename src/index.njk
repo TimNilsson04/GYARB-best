@@ -1,6 +1,7 @@
 ---
 layout: base.njk
 title: Flip flops
+
 ---
 
 
@@ -11,22 +12,20 @@ title: Flip flops
       <script type="text/javascript">
     var alerted = localStorage.getItem('alerted') || '';
     if (alerted != 'yes') {
-     alert("Den här hemsidan sparar din data. /n Den tar ingen konstig information utan bara data för google analytics.");
+     alert("Den här hemsidan sparar din data. \n Den tar ingen konstig information utan bara data för google analytics.");
      localStorage.setItem('alerted','yes');
     }
 </script>
 
        </nav>
-
+<div>
 <a class="home" href="/">
-    <div>
-    
         <h1> Flip Flops </h1>
         
         <hr>
         <p class="text"> Put Your Flip in the Flop </p>
-    </div>
 </a>
+</div>
 
 </div>
 
@@ -41,13 +40,14 @@ title: Flip flops
         <a href="/flipflops/{{ product.name | slug }}"> 
             {% set imageUrl = "./src/img/" + product.name + "/" + product.images[0].url  %}
             {% image imageUrl, product.images[0].alt %}
+            
         </a>
         <div class="card">
-          <h1></h1>
           <p class="price">{{ product.price }}Kr</p>
           <p class="text1">{{ product.description }}</p>
         </div>
     </div>
+    
     </div>
         </main>
 
@@ -56,7 +56,7 @@ title: Flip flops
     </div>
 
     <footer>
-        <h2>Bättre GYARB Hemsida</h2>
+        <h3>Bättre GYARB Hemsida</h3>
             <p>
                 Den här sidan är gjord som ett experiment för att kolla hur effektiv en app kallad    
             </p>
@@ -64,18 +64,3 @@ title: Flip flops
                 Ligthhouse är för att förbättra SEO värdet på en hemsida.
             </p>
     </footer>
-
-<!-- urls
-
-        <a href="https://www.stadium.se/barn/barnskor/sandaler/350683102/warp.j-sand-flip-flop.black-printed">Länk</a>
-
-        <a href="https://www.stadium.se/herr/herrskor/sandaler/364421102/superdry.m-code-essential-flip-flop.denver-orange">Länk</a>
-
-        <a href="https://www.stadium.se/herr/herrskor/sandaler/364421101/superdry.m-code-essential-flip-flop.black">Länk</a>
-
-        <a href="https://www.stadium.se/dam/damskor/sandaler/299592102/roxy.w-jyll-iii.tan">Länk</a>
-
-        <a href="https://www.stadium.se/barn/barnskor/sandaler/320730102/roxy.g-rg-sandy-iii.black-i">Länk</a>
-
-        <a href="https://www.stadium.se/herr/herrskor/sandaler/363254106/quiksilver.m-molokai-layback.black#">Länk</a>
-

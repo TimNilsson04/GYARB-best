@@ -1,33 +1,33 @@
 const Image = require("@11ty/eleventy-img");
 
 async function imageShortcode(src, alt, sizes) {
-    let metadata = await Image(src, {
-        widths: [300, 600],
-        formats: ['avif', 'jpeg'],
-        outputDir: './dist/img/',
-    });
+  let metadata = await Image(src, {
+    widths: [300, 600],
+    formats: ['avif', 'jpeg'],
+    outputDir: './dist/img/',
+  });
 
-    let imageAttributes = {
-        alt,
-        sizes,
-        loading: 'lazy',
-        decoding: 'async',
-    };
+  let imageAttributes = {
+    alt,
+    sizes,
+    loading: 'lazy',
+    decoding: 'async',
+  };
 
-    // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
-    return Image.generateHTML(metadata, imageAttributes);
+  // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
+  return Image.generateHTML(metadata, imageAttributes);
 }
 
 module.exports = function (eleventyConfig) {
-    eleventyConfig.addPlugin(lazyImages, {})
-    function lazyImages (eleventyConfig, userOptions = {}) {
-    const {parse} = require('node-html-parser')
-  
+  eleventyConfig.addPlugin(lazyImages, {})
+  function lazyImages(eleventyConfig, userOptions = {}) {
+    const { parse } = require('node-html-parser')
+
     const options = {
       name: 'lazy-images',
       ...userOptions
     }
-  
+
     eleventyConfig.addTransform(options.extensions, (content, outputPath) => {
       if (outputPath.endsWith('.html')) {
         const root = parse(content);
@@ -40,14 +40,17 @@ module.exports = function (eleventyConfig) {
       return content;
     })
   }
-    eleventyConfig.addPassthroughCopy("src/css");
-    eleventyConfig.addPassthroughCopy("src/font");//
-    eleventyConfig.addPassthroughCopy("src/img");
-    eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
-    return {
-        dir: {
-            input: 'src',
-            output: 'dist',
-        },
-    };
+  eleventyConfig.addPassthroughCopy({
+    'src/robots.txt': 'robots.txt',
+  });
+  eleventyConfig.addPassthroughCopy("src/css");
+  eleventyConfig.addPassthroughCopy("src/font");//
+  eleventyConfig.addPassthroughCopy("src/img");
+  eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
+  return {
+    dir: {
+      input: 'src',
+      output: 'dist',
+    },
+  };
 };
