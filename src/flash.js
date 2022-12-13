@@ -13,7 +13,7 @@ const flash = () => {
         button.textContent = `OK`;
         const p = document.createElement('p');
         p.id = 'flash-message--content';
-        p.textContent = `Den här webbplatsen sparar information i din webbläsare.`;
+        p.textContent = `Den här webbplatsen sparar information för google analytics.`;
         message.appendChild(p);
         inner.appendChild(button);
         button.addEventListener('click', () => {
