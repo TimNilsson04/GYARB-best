@@ -2,7 +2,7 @@
 @use "flash";
 
 body{
-    background-color: #fff;
+    background-color: rgb(238, 238, 238);
 }
 
 .grid-container {
@@ -41,6 +41,7 @@ body{
   }
   h2{
     font-family: 'Oswald', sans-serif;
+    color: #505050;
   }
 
 hr{
@@ -55,11 +56,14 @@ hr{
   
 }
 
+
 .text{
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-family: 'Cormorant Infant', serif;
-  color: #9D8DF1;
+  background: -webkit-linear-gradient(8.5deg, #8c7ae1 , #816edc  ,  #08ca90 , #08ca90  );
+     -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
 }
 .text1{
   padding-left: 2%;
@@ -124,7 +128,7 @@ a{
     margin-top: 2rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
-   
+   background-color: rgb(234, 234, 234);
     text-align: center;
   }
   .card1 {
@@ -134,7 +138,7 @@ a{
     
   }
   .price {
-    color: grey;
+    color: rgb(64, 64, 64);
     font-size: 22px;
     font-family: 'Noto Serif Khojki', serif;
   }
